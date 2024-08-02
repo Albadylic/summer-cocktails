@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./CocktailCard.css";
 
 const getColorContrast = (hexColor) => {
@@ -10,48 +10,91 @@ const getColorContrast = (hexColor) => {
   return brightness < 128 ? "light" : "dark";
 };
 
-const CocktailCard = ({ drink }) => {
-  const cardStyle = {
-    "--primary-color": drink.primaryColor,
-    "--secondary-color": drink.secondaryColor,
+const Carousel = ({ drinks }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const handleKeydown = (event) => {
+      if (event.key === "ArrowRight") {
+        handleNext();
+      } else if (event.key === "ArrowLeft") {
+        handlePrev();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeydown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeydown);
+    };
+  }, [currentIndex]);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % drinks.length);
   };
 
-  const isDarkText = getColorContrast(drink.primaryColor) === "dark";
+  const handlePrev = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + drinks.length) % drinks.length
+    );
+  };
+
+  const cardStyle = {
+    "--primary-color": drinks[currentIndex].primaryColor,
+    "--secondary-color": drinks[currentIndex].secondaryColor,
+  };
+
+  const isDarkText =
+    getColorContrast(drinks[currentIndex].primaryColor) === "dark";
 
   return (
-    <div
-      className="cocktail-card"
-      style={cardStyle}
-      data-dark-text={isDarkText}
-    >
-      <h2>
-        {drink.name} {drink.emoji}
-      </h2>
-      <h3>Ingredients:</h3>
-      <ul>
-        {drink.ingredients.map((ingredient, index) => (
-          <li key={index}>{ingredient}</li>
+    <div className="carousel-container">
+      <button className="carousel-button left" onClick={handlePrev}>
+        ‹
+      </button>
+      <div
+        className="cocktail-card"
+        style={cardStyle}
+        data-dark-text={isDarkText}
+      >
+        <h2>
+          {drinks[currentIndex].name} {drinks[currentIndex].emoji}
+        </h2>
+        <h3>Ingredients:</h3>
+        <ul>
+          {drinks[currentIndex].ingredients.map((ingredient, index) => (
+            <li key={index}>{ingredient}</li>
+          ))}
+        </ul>
+        <h3>Method:</h3>
+        <ol>
+          {drinks[currentIndex].method.map((step, index) => (
+            <li key={index}>{step}</li>
+          ))}
+        </ol>
+        <p>
+          <strong>Tasting notes:</strong> {drinks[currentIndex].tastingNotes}
+        </p>
+      </div>
+      <button className="carousel-button right" onClick={handleNext}>
+        ›
+      </button>
+      <div className="carousel-dots">
+        {drinks.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${index === currentIndex ? "active" : ""}`}
+          />
         ))}
-      </ul>
-      <h3>Method:</h3>
-      <ol>
-        {drink.method.map((step, index) => (
-          <li key={index}>{step}</li>
-        ))}
-      </ol>
-      <p>
-        <strong>Tasting notes:</strong> {drink.tastingNotes}
-      </p>
+      </div>
     </div>
   );
 };
 
-const CocktailList = ({ drinks }) => (
+const CocktailCard = ({ drinks }) => (
   <div className="cocktail-list">
-    {drinks.map((drink, index) => (
-      <CocktailCard key={index} drink={drink} />
-    ))}
+    <Carousel drinks={drinks} />
   </div>
 );
 
-export default CocktailList;
+export default CocktailCard;
