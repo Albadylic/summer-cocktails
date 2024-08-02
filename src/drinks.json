@@ -1,0 +1,177 @@
+[
+  {
+    "name": "White Port & Tonic",
+    "ingredients": [
+      "60ml White Port",
+      "120ml Tonic water",
+      "Lime wedge for garnish"
+    ],
+    "method": [
+      "Fill a glass with ice.",
+      "Pour in the White Port.",
+      "Top up with tonic water.",
+      "Stir gently and garnish with a lime wedge."
+    ],
+    "tastingNotes": "light, refreshing, and subtly sweet with citrusy undertones.",
+    "emoji": "🍹",
+    "primaryColor": "#f5e1c6",
+    "secondaryColor": "#007f00"
+  },
+  {
+    "name": "Aperol Spritz",
+    "ingredients": [
+      "60ml Aperol",
+      "90ml Prosecco",
+      "30ml Soda water",
+      "Orange slice for garnish"
+    ],
+    "method": [
+      "Fill a glass with ice.",
+      "Add the Aperol.",
+      "Pour in the prosecco.",
+      "Top up with soda water.",
+      "Stir gently and garnish with an orange slice."
+    ],
+    "tastingNotes": "bittersweet, bubbly, and perfect for a summer afternoon.",
+    "emoji": "🍊",
+    "primaryColor": "#f95b42",
+    "secondaryColor": "#ffffff"
+  },
+  {
+    "name": "Gin & Tonic",
+    "ingredients": ["50ml Gin", "150ml Tonic water", "Lime wedge for garnish"],
+    "method": [
+      "Fill a glass with ice.",
+      "Pour in the gin.",
+      "Top up with tonic water.",
+      "Stir gently and garnish with a lime wedge."
+    ],
+    "tastingNotes": "crisp, refreshing, and aromatic with a hint of citrus.",
+    "emoji": "🍸",
+    "primaryColor": "#004d40",
+    "secondaryColor": "#00e5ff"
+  },
+  {
+    "name": "White Port Negroni",
+    "ingredients": ["30ml White Port", "30ml Gin", "30ml Martini Blanco"],
+    "method": [
+      "Fill a mixing glass with ice.",
+      "Add the White Port, gin, and Martini Blanco.",
+      "Stir well and strain into a glass filled with ice.",
+      "Garnish with an orange twist if desired."
+    ],
+    "tastingNotes": "complex, bittersweet, and herbaceous with a smooth finish.",
+    "emoji": "🍷",
+    "primaryColor": "#f5e1c6",
+    "secondaryColor": "#00274d"
+  },
+  {
+    "name": "Gin Fizz",
+    "ingredients": [
+      "50ml Gin",
+      "25ml Sugar syrup",
+      "25ml Lemon juice",
+      "100ml Soda water"
+    ],
+    "method": [
+      "Fill a shaker with ice.",
+      "Add the gin, sugar syrup, and lemon juice.",
+      "Shake well and strain into a glass filled with ice.",
+      "Top up with soda water and stir gently."
+    ],
+    "tastingNotes": "tangy, effervescent, and wonderfully refreshing.",
+    "emoji": "🍋",
+    "primaryColor": "#004d40",
+    "secondaryColor": "#ffeb3b"
+  },
+  {
+    "name": "Kahlua Iced Coffee",
+    "ingredients": ["50ml Kahlua", "60ml Espresso", "30ml Milk or cream"],
+    "method": [
+      "Fill a glass with ice.",
+      "Pour in the Kahlua and espresso.",
+      "Add milk or cream to taste.",
+      "Stir gently."
+    ],
+    "tastingNotes": "creamy, rich, and deeply satisfying with a pronounced coffee flavour.",
+    "emoji": "☕",
+    "primaryColor": "#3e2723",
+    "secondaryColor": "#d8c3a5"
+  },
+  {
+    "name": "White Port Martini",
+    "ingredients": [
+      "45ml White Port",
+      "45ml Martini Blanco",
+      "Lemon twist for garnish"
+    ],
+    "method": [
+      "Fill a shaker with ice.",
+      "Add the White Port and Martini Blanco.",
+      "Shake well and strain into a chilled martini glass.",
+      "Garnish with a lemon twist."
+    ],
+    "tastingNotes": "elegant, smooth, and slightly sweet with a touch of citrus.",
+    "emoji": "🍸",
+    "primaryColor": "#f5e1c6",
+    "secondaryColor": "#ffeb3b"
+  },
+  {
+    "name": "Cassis Gin Smash",
+    "ingredients": [
+      "50ml Gin",
+      "25ml Creme de Cassis",
+      "25ml Lime juice",
+      "Mint leaves"
+    ],
+    "method": [
+      "Muddle the mint leaves and lime juice in a shaker.",
+      "Fill the shaker with ice.",
+      "Add the gin and Creme de Cassis.",
+      "Shake well and strain into a glass filled with ice.",
+      "Garnish with additional mint leaves."
+    ],
+    "tastingNotes": "fruity, vibrant, and refreshingly sweet with a minty finish.",
+    "emoji": "🍇",
+    "primaryColor": "#4a0072",
+    "secondaryColor": "#007f00"
+  },
+  {
+    "name": "Tropical Balsam Spritz",
+    "ingredients": [
+      "45ml Riga Balsam Tropical",
+      "90ml Soda water",
+      "Lime wedge for garnish"
+    ],
+    "method": [
+      "Fill a glass with ice.",
+      "Pour in the Riga Balsam Tropical.",
+      "Top up with soda water.",
+      "Stir gently and garnish with a lime wedge."
+    ],
+    "tastingNotes": "exotic, fruity, and lightly bubbly.",
+    "emoji": "🍹",
+    "primaryColor": "#ff8f00",
+    "secondaryColor": "#007f00"
+  },
+  {
+    "name": "French 75",
+    "ingredients": [
+      "30ml Gin",
+      "15ml Lemon juice",
+      "15ml Sugar syrup",
+      "60ml Prosecco"
+    ],
+    "method": [
+      "Fill a shaker with ice.",
+      "Add the gin, lemon juice, and sugar syrup.",
+      "Shake well and strain into a champagne flute.",
+      "Top up with prosecco.",
+      "Stir gently and garnish with a lemon twist."
+    ],
+    "tastingNotes": "crisp, effervescent, and elegantly refreshing with a citrusy sparkle.",
+    "emoji": "🥂",
+    "primaryColor": "#004d40",
+    "secondaryColor": "#ffeb3b"
+  }
+]
