@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CocktailCard from "./CocktailCard";
+import CocktailList from "./CocktailCard";
 import drinksData from "./drinks.json";
 
 const App = () => {
@@ -11,7 +11,8 @@ const App = () => {
 
   return (
     <div>
-      <CocktailCard drinks={drinks} />
+      <h1>Summer Cocktails</h1>
+      <CocktailList drinks={drinks} />
     </div>
   );
 };
