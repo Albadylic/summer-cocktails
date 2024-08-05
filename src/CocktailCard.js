@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./CocktailCard.css";
 
 const getColorContrast = (hexColor) => {
@@ -12,6 +12,16 @@ const getColorContrast = (hexColor) => {
 
 const Carousel = ({ drinks }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = useCallback(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % drinks.length);
+  }, [drinks.length]);
+
+  const handlePrev = useCallback(() => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + drinks.length) % drinks.length
+    );
+  }, [drinks.length]);
 
   useEffect(() => {
     const handleKeydown = (event) => {
@@ -27,17 +37,7 @@ const Carousel = ({ drinks }) => {
     return () => {
       window.removeEventListener("keydown", handleKeydown);
     };
-  }, [currentIndex]);
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % drinks.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + drinks.length) % drinks.length
-    );
-  };
+  }, [handleNext, handlePrev]);
 
   if (drinks.length === 0) return <div>No drinks available.</div>;
 
