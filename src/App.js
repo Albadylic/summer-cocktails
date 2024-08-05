@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
-import CocktailList from "./CocktailCard";
+import CocktailCard from "./CocktailCard";
 import drinksData from "./drinks.json";
 
 const App = () => {
   const [drinks, setDrinks] = useState([]);
 
   useEffect(() => {
+    // Simulate data fetching
     setDrinks(drinksData);
   }, []);
 
   return (
-    <div>
-      <h1>Summer Cocktails</h1>
-      <CocktailList drinks={drinks} />
+    <div className="App">
+      <CocktailCard drinks={drinks} />
     </div>
   );
 };
