@@ -10,6 +10,13 @@ const getColorContrast = (hexColor) => {
   return brightness < 128 ? "light" : "dark";
 };
 
+const hexToRgba = (hex, alpha) => {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+};
+
 const Carousel = ({ drinks }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -38,6 +45,14 @@ const Carousel = ({ drinks }) => {
       window.removeEventListener("keydown", handleKeydown);
     };
   }, [handleNext, handlePrev]);
+
+  useEffect(() => {
+    if (drinks.length > 0) {
+      const primaryColor = drinks[currentIndex].primaryColor;
+      const transparentColor = hexToRgba(primaryColor, 0.2);
+      document.body.style.backgroundColor = transparentColor;
+    }
+  }, [currentIndex, drinks]);
 
   if (drinks.length === 0) return <div>No drinks available.</div>;
 

@@ -5,10 +5,6 @@
   --text-color-dark: #333;
 }
 
-.App {
-  background-color: #000;
-}
-
 .cocktail-card {
   border: 1px solid var(--secondary-color);
   border-radius: 10px;
